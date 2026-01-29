@@ -1,0 +1,20 @@
+{
+  "name": "task-master",
+  "version": "1.0.0",
+  "description": "End-to-end planning, specification, task management, and quality gating for software projects",
+  "author": {
+    "name": "Qazuor",
+    "url": "https://github.com/qazuor"
+  },
+  "repository": "https://github.com/qazuor/claude-code-task-master",
+  "license": "MIT",
+  "keywords": [
+    "planning",
+    "tasks",
+    "specifications",
+    "project-management",
+    "quality-gates",
+    "tdd"
+  ],
+  "hooks": "./hooks/hooks.json"
+}

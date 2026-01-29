@@ -223,7 +223,7 @@ Read or create `.claude/tasks/index.json`. This file uses the index schema:
     }
   ],
   "standalone": {
-    "path": "_standalone",
+    "path": "standalone",
     "total": 0,
     "completed": 0
   }

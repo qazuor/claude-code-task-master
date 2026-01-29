@@ -100,11 +100,11 @@ Generate a URL-friendly slug from the title:
 2. Replace spaces and special characters with hyphens
 3. Remove consecutive hyphens
 4. Trim leading/trailing hyphens
-5. Truncate to maximum 40 characters (break at word boundary)
+5. Truncate to maximum 50 characters (break at word boundary)
 
 Examples:
 - "User Authentication System" -> `user-authentication-system`
-- "Add Price Range Filter for Accommodations" -> `add-price-range-filter-for-accommodat`
+- "Add Price Range Filter for Search Results" -> `add-price-range-filter-for-search-results`
 
 ### Step 6: Create Spec Directory
 

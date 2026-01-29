@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node (in case of future tooling)
+node_modules/
+*.log
+
+# Generated project files (these live in the target project, not the plugin)
+.claude/specs/
+.claude/tasks/
+.claude/plans/

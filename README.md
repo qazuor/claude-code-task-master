@@ -230,11 +230,15 @@ claude-code-task-master/
 │   ├── spec-full.md
 │   ├── state-schema.json
 │   ├── metadata-schema.json
-│   └── index-schema.json
+│   ├── index-schema.json
+│   ├── specs-index-schema.json
+│   └── config-example.json
 ├── hooks/
 │   └── hooks.json             # SessionStart resume hook
 ├── scripts/
 │   └── session-resume.sh      # Resume detection script
+├── CHANGELOG.md
+├── LICENSE
 └── README.md
 ```
 

@@ -142,7 +142,7 @@ Task started!
   - Type check
   - Test suite
 
-  Good luck! When done, mark it complete with /task-done.
+  Good luck! The quality gate (lint, typecheck, tests) will run before completion.
 ```
 
 Show the task's subtasks (if any) as a checklist to guide implementation.

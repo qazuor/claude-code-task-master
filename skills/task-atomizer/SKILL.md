@@ -45,15 +45,15 @@ Examples:
 - Create environment variables
 - Set up configuration files
 - Create database migration files
-- Add new Zod schemas to `@repo/schemas`
+- Add new validation schemas
 
 #### Phase: `core`
 Database schemas, models, services, and core business logic.
 
 Examples:
-- Create Drizzle schema for new table
-- Implement model extending BaseModel
-- Create service extending BaseCrudService
+- Create ORM schema for new table
+- Implement data model
+- Create service layer with CRUD operations
 - Implement core business logic functions
 - Add validation schemas
 
@@ -63,9 +63,9 @@ API routes, frontend components, and system connections.
 Examples:
 - Create API routes using route factories
 - Implement frontend pages/components
-- Connect frontend to API via TanStack Query
+- Connect frontend to API via data-fetching layer
 - Add navigation/routing entries
-- Implement form handling with TanStack Form
+- Implement form handling and validation
 
 #### Phase: `testing`
 Integration tests, E2E tests, and cross-component test suites.
@@ -101,19 +101,19 @@ For each identified work unit, create a task object with these fields:
 ```json
 {
   "id": "T-001",
-  "title": "Create accommodation Drizzle schema",
-  "description": "Create the Drizzle ORM schema definition for the accommodations table in packages/db/src/schemas/. Include all columns from the data model spec: id, name, slug, description, price, status, coordinates, createdAt, updatedAt. Add appropriate indexes for slug (unique) and status. Write unit tests for schema validation in packages/db/test/schemas/.",
+  "title": "Create product ORM schema",
+  "description": "Create the ORM schema definition for the products table. Include all columns from the data model spec: id, name, slug, description, price, status, createdAt, updatedAt. Add appropriate indexes for slug (unique) and status. Write unit tests for schema validation.",
   "status": "pending",
   "complexity": 0,
   "blockedBy": [],
   "blocks": ["T-002", "T-003"],
   "subtasks": [
-    { "title": "Define Drizzle table schema with all columns", "completed": false },
+    { "title": "Define ORM table schema with all columns", "completed": false },
     { "title": "Add database indexes", "completed": false },
     { "title": "Export from barrel file", "completed": false },
     { "title": "Write schema unit tests", "completed": false }
   ],
-  "tags": ["database", "schema", "accommodation"],
+  "tags": ["database", "schema", "product"],
   "phase": "core",
   "qualityGate": {
     "lint": null,
@@ -131,16 +131,16 @@ For each identified work unit, create a task object with these fields:
 ### Task Title Guidelines
 
 Titles MUST use imperative verb + noun format:
-- "Create accommodation Drizzle schema"
-- "Implement accommodation service CRUD operations"
+- "Create product ORM schema"
+- "Implement product service CRUD operations"
 - "Add price filter API endpoint"
-- "Build accommodation list page component"
+- "Build product list page component"
 - "Configure authentication middleware"
 - "Write integration tests for booking flow"
 
 Avoid vague titles like:
-- "Work on accommodations" (too vague)
-- "Accommodation stuff" (not imperative)
+- "Work on products" (too vague)
+- "Product stuff" (not imperative)
 - "Fix things" (unclear scope)
 
 ### Task Description Guidelines
@@ -173,7 +173,7 @@ Follow these dependency rules:
 Group tasks that have no dependencies between them. These can be worked on simultaneously by different developers or in any order.
 
 Common parallel tracks:
-- Independent entity implementations (User model + Accommodation model)
+- Independent entity implementations (User model + Product model)
 - Frontend and backend for different features
 - Documentation for already-completed features
 - Test suites for independent components

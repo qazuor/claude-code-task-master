@@ -70,7 +70,7 @@ If no config file exists, auto-detect the project's tooling:
 4. **Monorepo detection:**
    - If `turbo.json` exists, consider using `turbo run lint/typecheck/test`
    - If the task affects a specific package, scope the commands to that package
-   - Example: If task files are in `packages/db/`, run `cd packages/db && pnpm run test`
+   - Example: If task files are in `packages/core/`, run `cd packages/core && pnpm run test`
 
 ### Step 3: Run Quality Checks
 
@@ -228,9 +228,9 @@ Quality gate FAILED. Task T-003 remains in-progress.
 
 --- Lint Failures ---
 3 errors found:
-  packages/db/src/models/user.ts:15 - no-unused-vars: 'oldPassword' is defined but never used
-  packages/db/src/models/user.ts:23 - prefer-const: 'result' is never reassigned
-  packages/service-core/src/services/auth.ts:8 - no-explicit-any: Unexpected any
+  src/models/user.ts:15 - no-unused-vars: 'oldPassword' is defined but never used
+  src/models/user.ts:23 - prefer-const: 'result' is never reassigned
+  src/services/auth.ts:8 - no-explicit-any: Unexpected any
 
 Suggested fixes:
   1. Remove unused 'oldPassword' parameter or prefix with underscore
@@ -239,11 +239,11 @@ Suggested fixes:
 
 --- Test Failures ---
 1 test failed:
-  FAIL packages/db/test/models/user.test.ts > User Model > should validate email format
+  FAIL test/models/user.test.ts > User Model > should validate email format
     Expected: true
     Received: false
 
-    at packages/db/test/models/user.test.ts:45:23
+    at test/models/user.test.ts:45:23
 
 Suggested fixes:
   1. Check the email validation regex in User model

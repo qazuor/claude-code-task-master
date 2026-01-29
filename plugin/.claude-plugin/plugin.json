@@ -15,6 +15,5 @@
     "project-management",
     "quality-gates",
     "tdd"
-  ],
-  "hooks": "./hooks/hooks.json"
+  ]
 }
